@@ -1,24 +1,19 @@
 #include <stdio.h>
-#include<conio.h>
+#include <math.h>
+
 int main()
 {
-    int base, exponent;
-
-    long long result = 1;
+    double base, exponent, result;
 
     printf("Enter a base number: ");
-    scanf("%d", &base);
+    scanf("%lf", &base);
 
     printf("Enter an exponent: ");
-    scanf("%d", &exponent);
+    scanf("%lf", &exponent);
 
-    while (exponent != 0)
-    {
-        result *= base;
-        --exponent;
-    }
+    result = pow(base, exponent);
 
-    printf("Answer = %lld", result);
+    printf("%.1lf^%.1lf = %.2lf", base, exponent, result);
 
     return 0;
 }
